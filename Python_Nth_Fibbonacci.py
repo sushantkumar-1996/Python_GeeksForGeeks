@@ -36,3 +36,26 @@ def fibbon(x):
 
 x = int(input("Enter the Number"))
 print(fibbon(x))
+
+
+# using dynamic programming with space optimization
+
+def fibbo(y):
+    a = 0
+    b = 1
+    if y < 0:
+        print("Incorrect Input")
+    elif n == 0:
+        return a
+    elif n == 1:
+        return b
+    else:
+        for i in range(2, y):
+            c = a + b
+            a = b
+            b = c
+        return b
+
+
+y = int(input("Enter The nth digit"))
+print(fibbo(y))
