@@ -126,7 +126,7 @@ def findPosition(k, h):
         f2 = f3
 
         if f2 % k == 0:
-            return n * j
+            return h * j
         j += 1
     return
 
