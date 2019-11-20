@@ -59,3 +59,76 @@ def fibbo(y):
 
 y = int(input("Enter The nth digit"))
 print(fibbo(y))
+
+"""Python program to check if a number is a fibbonacci number--->A number is fibbonacci if and only if one or both of 
+ (5*n2 + 4) or (5*n2 – 4) is a perfect square
+"""
+
+import math
+
+
+def isPerfectSquare(q):  # function to check if q is a perfect square
+    s = int(math.sqrt(q))
+    return s * s == q
+
+
+def isFibbonacci(w):
+    return isPerfectSquare(5 * w * w + 4) or isPerfectSquare(5 * w * w - 4)
+
+
+for i in range(1, 11):
+    if isFibbonacci(i):
+        print(i, "is a fibbonacci ")
+    else:
+        print(i, "is not a fibbonacci")
+
+"""Program for Nth multiple of a number in a fibonacci Series--->>  Example-Input : k = 2, n = 3
+Output : 9  3\'rd multiple of 2 in Fibonacci Series is 34  which appears at position 9.
+Solution --Fibbonacci series is periodic under modular representation
+
+F (mod 2) = 1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,
+            1,1,0,1,1,0,1,1,0,1,1,0,1,1,0 
+Here 0 is repeating at every 3rd index and 
+the cycle repeats at every 3rd index. 
+
+F (mod 3) = 1,1,2,0,2,2,1,0,1,1,2,0,2,2,1,0
+            ,1,1,2,0,2,2,1,0,1,1,2,0,2,2
+Here 0 is repeating at every 4th index and 
+the cycle repeats at every 8th index.
+
+F (mod 4) = 1,1,2,3,1,0,1,1,2,3,1,0,1,1,2,3,
+           1,0,1,1,2,3,1,0,1,1,2,3,1,0 
+Here 0 is repeating at every 6th index and 
+the cycle repeats at every 6th index.
+
+F (mod 5) = 1,1,2,3,0,3,3,1,4,0,4,4,3,2,0,
+            2,2,4,1,0,1,1,2,3,0,3,3,1,4,0
+Here 0 is repeating at every 5th index and
+the cycle repeats at every 20th index.
+
+F (mod 6) = 1,1,2,3,5,2,1,3,4,1,5,0,5,5,4,
+            3,1,4,5,3,2,5,1,0,1,1,2,3,5,2
+Here 0 is repeating at every 12th index and 
+the cycle repeats at every 24th index.
+
+"""
+k = int(input("Enter the number for which we will be finding the multiple"))
+h = int(input("Enter the Hth Mltiple of k"))
+
+
+def findPosition(k, h):
+    f1 = 0
+    f2 = 1
+    j = 2
+    while j != 0:
+        f3 = f1 + f2
+        f1 = f2
+        f2 = f3
+
+        if f2 % k == 0:
+            return n * j
+        j += 1
+    return
+
+
+print(findPosition(k, n))
