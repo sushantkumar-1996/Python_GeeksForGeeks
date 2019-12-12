@@ -1,4 +1,4 @@
-"""Python Programto generate a Random number--- For this purpose we will be using randint() function which belongs in random
+"""Python Program to generate a Random number--- For this purpose we will be using randint() function which belongs in random
 module which can be found in python tutorials section"""
 
 import random
