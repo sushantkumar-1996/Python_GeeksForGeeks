@@ -20,3 +20,15 @@ def sumcube(p):
 
 p = int(input("Enter the upper limit of n natural numbers"))
 print(sumcube(p))
+
+"""Python program that takes a positive integer and returns thge sum of cube of all the positive integers smaller than
+the specified number"""
+def cbsm(l):
+    sm1 = 0
+    for i in range(1, l):
+        sm1 += i * i * i
+    return sm1
+
+
+l = int(input("Enter the NUmber"))5
+print(cbsm(l))
