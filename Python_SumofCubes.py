@@ -30,5 +30,5 @@ def cbsm(l):
     return sm1
 
 
-l = int(input("Enter the NUmber"))5
+l = int(input("Enter the NUmber"))
 print(cbsm(l))
